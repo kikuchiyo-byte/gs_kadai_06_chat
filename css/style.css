@@ -1,0 +1,236 @@
+body {
+  height: 100vh;
+  margin: 10px;
+  background: #fae4bf;
+  margin: 0;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+} */
+
+/* .search-area {
+  margin: 20px 0;
+} */
+
+#postList {
+  margin-top: 20px;
+
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.page {
+  display: none;
+  min-width: 600px;
+}
+
+.page.active {
+  display: block;
+}
+.add{
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+/* 
+#newPostBtn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+
+
+
+/* 
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+} */
+
+.post .tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.scroll-btn {
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  padding: 10px 15px;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.reactions {
+  background: #fff7e6;
+  /* 柔らかいオレンジ */
+  border-left: 4px solid #ff9800;
+  padding: 10px;
+  border-radius: 6px;
+}
+.tyuuou{
+  display: flex;
+  justify-content: center;
+}
+.nav button[data-page="home"] {
+  display: none;
+}
+
+.logo {
+  text-align: center;
+  color: #ff6b6b;
+}
+.top-image{
+  width: 100%;
+  border-radius: 10px;
+}
+.rule{
+  background: #fff7e6;
+  border: 4px dashed #a76707;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+h3{
+  font-weight: 500;
+    color: #373737;
+}
+h2{
+  color: #373737;
+}
+#googleLogin {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  background: #ff7b7b;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+#guestLogin{
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  background: #ffc430;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+#userInfo{
+ color: #373737;
+  font-size: 18px;
+  font-weight: 500;
+}
+#name{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#text{
+  width: 80%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#postSubmit{
+  background: #ff9800;
+  color: white;
+  border: 3px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 30px;
+  width: 100px;
+    font-weight: 400;
+  font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+#postReaction{
+  background: #ffea00;
+  color: #d38614;
+  border: 3px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 150px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.likeBtn{
+ color: #ff0000;
+  background: #f5e8e8;
+  border: 3px solid #e6e6e6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dislikeBtn{
+ color: #002fff;
+  background: #e8eff5;
+  border: 3px solid #e6e6e6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
