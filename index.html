@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掲示板</title>
+    <link rel="" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+  <body>
+  <div id="home" class="page active">
+  <!-- <div class="header">
+  <h1 class="logo">みんなの掲示板</h1>
+</div> -->
+<div class="tyuuou">
+<img src="img/top.png" alt="top" class="top-image">
+</div>
+  <nav class="nav">
+    <button data-page="home" class="active">🏠 ホーム</button>
+    <div class="tyuuou">
+    <button data-page="add" class="add">＋ 新規投稿</button>
+    </div>
+  </nav>
+  <div class="rule">
+  <h2>みんなの掲示板へようこそ！</h2>
+  <h3>ここはみんなが自由に投稿できる掲示板です。<br>
+    楽しい場所をみんなで作っていきましょう</h3>
+  <h2>掲示板のルール<h2>
+  <h3>・誹謗中傷や人を不快にする内容は禁止です。<br>
+    ・個人情報の投稿は避けてください。<br>
+    ・連投は禁止です。<br>
+    ・ルールを守って楽しく利用しましょう！</h3>
+    </div>
+</div>
+<div id="add" class="page">
+
+<div id="postList"></div>
+<button id="googleLogin"><img src="img/google.png" alt="Google Icon">googleでログイン</button>
+<button id="guestLogin">ゲストログイン</button>
+<div id="userInfo"></div>
+
+
+  <form id="postForm">
+      <div id="posts"></div>
+    <input id="name" placeholder="名前" required />
+    <textarea id="text" placeholder="投稿内容" required></textarea>
+    <br>
+    <button id="postSubmit" type="submit">投稿</button>
+    <button id="postReaction">投票投稿</button>
+  </form>
+  <button id="scrollBottomBtn" class="scroll-btn">最新の投稿へ ↓</button>
+
+
+
+  </div>
+  
+<!-- jQuery（必ず一番最初に読み込む） -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Firebase v8 SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<!--authのSDKを追加-->
+
+<!-- Firebase 初期化（ここに config を入れる） -->
+<script>
+  const firebaseConfig = {
+//your key
+  };
+  // Firebase 初期化 
+  // 初期化はここだけ
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+    const auth = firebase.auth();
+</script>
+
+<!-- あなたのアプリのコード -->
+<script src="app.js"></script>
+</body>
+
+</html>
